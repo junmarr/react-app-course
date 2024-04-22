@@ -20,6 +20,7 @@
 
 // export default App;
 
+//ALERT
 // import Alert from './components/Alert';
 
 // function App() {
@@ -34,22 +35,39 @@
 
 // export default App;
 
-import Button from './components/Button';
-import Alert from './components/Alert';
-import { useState } from 'react';
+//SHOW ALERT
+// import Button from './components/Button';
+// import Alert from './components/Alert';
+// import { useState } from 'react';
+
+// function App() {
+//   const [alertVisibility, setAlertVisibility] = useState(false);
+
+//   return (
+//     <>
+//       {alertVisibility && (
+//         <Alert onClose={() => setAlertVisibility(false)}>Hello World</Alert>
+//       )}
+//       <Button onClick={() => setAlertVisibility(true)}>
+//         Click to show alert
+//       </Button>
+//     </>
+//   );
+// }
+
+// export default App;
+
+import Like from './components/like';
 
 function App() {
-  const [alertVisibility, setAlertVisibility] = useState(false);
-
   return (
-    <>
-      {alertVisibility && (
-        <Alert onClose={() => setAlertVisibility(false)}>Hello World</Alert>
-      )}
-      <Button onClick={() => setAlertVisibility(true)}>
-        Click to show alert
-      </Button>
-    </>
+    <div>
+      <Like
+        onLike={() => {
+          console.log('click');
+        }}
+      />
+    </div>
   );
 }
 
